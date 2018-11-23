@@ -14,9 +14,9 @@ branches:
 #testing dll
 #build
 before_script:
-- cp .env.travis .env
-- composer install --no-interaction
-- php artisan key:generate
+  - cp .env.travis .env
+  - composer install --no-interaction
+  - php artisan key:generate
 
 
 #Main Execution
