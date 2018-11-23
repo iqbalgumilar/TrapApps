@@ -19,7 +19,15 @@ before_install:
   - kubect1
 
 #Pre Execution
+#testing dll
+#build
 before_script:
+- cp .env.travis .env
+- composer install --no-interaction
+- php artisan key:generate
+
 
 #Main Execution
+#Jalan
 script:
+  - ./vendor/bin/phpunit
